@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8 >
+<head>
+<title>Tatasky web interface</title>
+</head>
+
+<style id="jsbin-css">
+button.btn:active { background:yellow; } 
+</style>
+
+<body>
+
+<div align="center" class="div_text_shadow">
+
+<BR>
+
+<H1>TataSky WiFi Remote</H1>
+
+<BR>
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_1" onClick="buttonClick(this.id)">   1  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_2" onClick="buttonClick(this.id)">   2  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_3" onClick="buttonClick(this.id)">   3  </button>
+
+&nbsp;&nbsp;&nbsp; <BR> <BR>
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_4" onClick="buttonClick(this.id)"> 	4  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_5" onClick="buttonClick(this.id)">   5  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_6" onClick="buttonClick(this.id)">   6  </button>
+
+&nbsp;&nbsp;&nbsp; <BR> <BR>
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_7" onClick="buttonClick(this.id)">   7  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_8" onClick="buttonClick(this.id)">   8  </button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_9" onClick="buttonClick(this.id)">   9  </button>
+
+&nbsp;&nbsp;&nbsp; <BR> <BR>
+
+<button style="height:50px;width:50px" class="btn" type="button" id="KEY_0" onClick="buttonClick(this.id)">   0  </button>
+
+&nbsp;&nbsp; &nbsp;<BR> <BR>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<!--<script src="/socket.io/socket.io.js"></script>-->	 
+<script>
+
+var socket = io(); //load socket.io-client and connect to the host that serves the page
+
+function buttonClick(clicked_id)
+{	
+	socket.emit("button",clicked_id);
+	}
+
+	
+  
+  
+  
+	
+
+
+	
+</script>
+
+</body>
+</html>
+
+
+
