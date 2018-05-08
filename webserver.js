@@ -20,10 +20,10 @@ function handler (req, res) { //create server
   });
 }
 
-io.sockets.on('connection', function (socket) {// WebSocket Connection
+io.sockets.on('connection', function (socket) {
 
 
- socket.on('button', function(data) { //get light switch status from client
+ socket.on('button', function(data) { 
 
 lirc_node.irsend.send_once("tatasky", data, function() {
   console.log('Sent '+data+' command!');
